@@ -1,0 +1,364 @@
+
+/* line 85 : /www/bitc/bitc.styl */
+
+/* line 1 : /usr/local/lib/node_modules/stylus/lib/functions/index.styl */
+
+/* line 1 : /www/bitc/bitc.styl */
+/* Custom Grid Mixin to work
+ * with Skeleton CSS Framework
+ * */
+
+/* line 5 : /www/bitc/bitc.styl */
+/* Determine container width in pixel and number of columns
+ * Then divide # of cols / container width = column width in pixel
+ * Convert column width pixel to percent
+ * column width pixel / container width = result
+ * Move decimal point to the right twice
+ * */
+
+/* line 12 : /www/bitc/bitc.styl */
+/* 1,800px / 16 = 112.5
+ * 112.5 / 1,800px = 0.0625 = 6.25%
+ * To get other percent in remaining column
+ * 112.5 * 2(# of cols) = 225px
+ * 225px / 1,800px = 0.125 = 12.5%
+ * */
+
+/* line 19 : /www/bitc/bitc.styl */
+/* To avoid manually recalculating each column
+ * We can use a responsive grid system generator
+ * http://gridpak.com/
+ * http://responsify.it/
+ * Retrieve columns width value and copy & paste here
+ * Set Columns to 16, Gutter Width to 0 (since were using padding),
+ * and Breakpoint doesnt matter since were setting breakpoints manually
+ * */
+
+/* line 34 : /www/bitc/bitc.styl */
+/* TODO
+ * fix gutter-padding issue
+ * set a default CSS measurement unit
+ * and create a mixin for converting other css measurement unit
+ * to our default unit
+ * FOR, this works, above TODO is for polishing measurements
+ * */
+
+/* line 48 : /www/bitc/bitc.styl */
+/* Grid */
+
+/* line 49 : /www/bitc/bitc.styl */
+.container,
+.row {
+  max-width: 100%;
+  width: auto;
+}
+
+/* line 52 : /www/bitc/bitc.styl */
+.container:after,
+.row:after {
+  clear: both;
+}
+
+/* line 55 : /www/bitc/bitc.styl */
+.column,
+.columns {
+  margin-left: 0;
+  padding-left: 1%;
+  float: left;
+}
+
+/* line 59 : /www/bitc/bitc.styl */
+.column.end,
+.columns.end {
+  float: left !important;
+}
+
+/* line 62 : /www/bitc/bitc.styl */
+.column:first-child,
+.columns:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* line 66 : /www/bitc/bitc.styl */
+.column:last-child,
+.columns:last-child {
+  float: right;
+}
+
+/* line 69 : /www/bitc/bitc.styl */
+/* This Grid system is mobile-first, we dont need to define
+ * media query for small unless we plan on setting a range
+ * for small selector
+ * @media all and (min-width:0em) and (max-width:47.938em)
+ */
+
+/* line 75 : /www/bitc/bitc.styl */
+.small-1 {
+  width: 100%;
+}
+
+/* line 75 : /www/bitc/bitc.styl */
+.small-2 {
+  width: 100%;
+}
+
+/* line 75 : /www/bitc/bitc.styl */
+.small-3 {
+  width: 100%;
+}
+
+/* line 75 : /www/bitc/bitc.styl */
+.small-4 {
+  width: 100%;
+}
+
+/* line 75 : /www/bitc/bitc.styl */
+.small-5 {
+  width: 100%;
+}
+
+/* line 75 : /www/bitc/bitc.styl */
+.small-6 {
+  width: 100%;
+}
+
+/* line 75 : /www/bitc/bitc.styl */
+.small-7 {
+  width: 100%;
+}
+
+/* line 75 : /www/bitc/bitc.styl */
+.small-8 {
+  width: 100%;
+}
+
+/* line 75 : /www/bitc/bitc.styl */
+.small-9 {
+  width: 100%;
+}
+
+/* line 75 : /www/bitc/bitc.styl */
+.small-10 {
+  width: 100%;
+}
+
+/* line 75 : /www/bitc/bitc.styl */
+.small-11 {
+  width: 100%;
+}
+
+/* line 75 : /www/bitc/bitc.styl */
+.small-12 {
+  width: 100%;
+}
+
+/* line 75 : /www/bitc/bitc.styl */
+.small-13 {
+  width: 100%;
+}
+
+/* line 75 : /www/bitc/bitc.styl */
+.small-14 {
+  width: 100%;
+}
+
+/* line 75 : /www/bitc/bitc.styl */
+.small-15 {
+  width: 100%;
+}
+
+/* line 75 : /www/bitc/bitc.styl */
+.small-16 {
+  width: 100%;
+}
+
+/* line 78 : /www/bitc/bitc.styl */
+@media (min-width: 48em) {
+
+/* line 80 : /www/bitc/bitc.styl */
+  .medium-1,
+  .large-1 {
+    width: 5.25%;
+  }
+
+/* line 80 : /www/bitc/bitc.styl */
+  .medium-2,
+  .large-2 {
+    width: 11.5%;
+  }
+
+/* line 80 : /www/bitc/bitc.styl */
+  .medium-3,
+  .large-3 {
+    width: 17.75%;
+  }
+
+/* line 80 : /www/bitc/bitc.styl */
+  .medium-4,
+  .large-4 {
+    width: 24%;
+  }
+
+/* line 80 : /www/bitc/bitc.styl */
+  .medium-5,
+  .large-5 {
+    width: 30.25%;
+  }
+
+/* line 80 : /www/bitc/bitc.styl */
+  .medium-6,
+  .large-6 {
+    width: 36.5%;
+  }
+
+/* line 80 : /www/bitc/bitc.styl */
+  .medium-7,
+  .large-7 {
+    width: 42.75%;
+  }
+
+/* line 80 : /www/bitc/bitc.styl */
+  .medium-8,
+  .large-8 {
+    width: 49%;
+  }
+
+/* line 80 : /www/bitc/bitc.styl */
+  .medium-9,
+  .large-9 {
+    width: 55.25%;
+  }
+
+/* line 80 : /www/bitc/bitc.styl */
+  .medium-10,
+  .large-10 {
+    width: 61.5%;
+  }
+
+/* line 80 : /www/bitc/bitc.styl */
+  .medium-11,
+  .large-11 {
+    width: 67.75%;
+  }
+
+/* line 80 : /www/bitc/bitc.styl */
+  .medium-12,
+  .large-12 {
+    width: 74%;
+  }
+
+/* line 80 : /www/bitc/bitc.styl */
+  .medium-13,
+  .large-13 {
+    width: 80.25%;
+  }
+
+/* line 80 : /www/bitc/bitc.styl */
+  .medium-14,
+  .large-14 {
+    width: 86.5%;
+  }
+
+/* line 80 : /www/bitc/bitc.styl */
+  .medium-15,
+  .large-15 {
+    width: 92.75%;
+  }
+
+/* line 80 : /www/bitc/bitc.styl */
+  .medium-16,
+  .large-16 {
+    width: 99%;
+  }
+
+/* line 84 : /www/bitc/bitc.styl */
+  .medium-offset-1,
+  .large-offset-1 {
+    width: 11.5%;
+  }
+
+/* line 84 : /www/bitc/bitc.styl */
+  .medium-offset-2,
+  .large-offset-2 {
+    width: 17.75%;
+  }
+
+/* line 84 : /www/bitc/bitc.styl */
+  .medium-offset-3,
+  .large-offset-3 {
+    width: 24%;
+  }
+
+/* line 84 : /www/bitc/bitc.styl */
+  .medium-offset-4,
+  .large-offset-4 {
+    width: 30.25%;
+  }
+
+/* line 84 : /www/bitc/bitc.styl */
+  .medium-offset-5,
+  .large-offset-5 {
+    width: 36.5%;
+  }
+
+/* line 84 : /www/bitc/bitc.styl */
+  .medium-offset-6,
+  .large-offset-6 {
+    width: 42.75%;
+  }
+
+/* line 84 : /www/bitc/bitc.styl */
+  .medium-offset-7,
+  .large-offset-7 {
+    width: 49%;
+  }
+
+/* line 84 : /www/bitc/bitc.styl */
+  .medium-offset-8,
+  .large-offset-8 {
+    width: 55.25%;
+  }
+
+/* line 84 : /www/bitc/bitc.styl */
+  .medium-offset-9,
+  .large-offset-9 {
+    width: 61.5%;
+  }
+
+/* line 84 : /www/bitc/bitc.styl */
+  .medium-offset-10,
+  .large-offset-10 {
+    width: 67.75%;
+  }
+
+/* line 84 : /www/bitc/bitc.styl */
+  .medium-offset-11,
+  .large-offset-11 {
+    width: 74%;
+  }
+
+/* line 84 : /www/bitc/bitc.styl */
+  .medium-offset-12,
+  .large-offset-12 {
+    width: 80.25%;
+  }
+
+/* line 84 : /www/bitc/bitc.styl */
+  .medium-offset-13,
+  .large-offset-13 {
+    width: 86.5%;
+  }
+
+/* line 84 : /www/bitc/bitc.styl */
+  .medium-offset-14,
+  .large-offset-14 {
+    width: 92.75%;
+  }
+
+/* line 84 : /www/bitc/bitc.styl */
+  .medium-offset-15,
+  .large-offset-15 {
+    width: 99%;
+  }
+}

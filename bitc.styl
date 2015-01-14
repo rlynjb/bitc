@@ -1,0 +1,85 @@
+/* Custom Grid Mixin to work
+ * with Skeleton CSS Framework
+ * */
+
+/* Determine container width in pixel and number of columns
+ * Then divide # of cols / container width = column width in pixel
+ * Convert column width pixel to percent
+ * column width pixel / container width = result
+ * Move decimal point to the right twice
+ * */
+
+/* 1,800px / 16 = 112.5
+ * 112.5 / 1,800px = 0.0625 = 6.25%
+ * To get other percent in remaining column
+ * 112.5 * 2(# of cols) = 225px
+ * 225px / 1,800px = 0.125 = 12.5%
+ * */
+
+/* To avoid manually recalculating each column
+ * We can use a responsive grid system generator
+ * http://gridpak.com/
+ * http://responsify.it/
+ * Retrieve columns width value and copy & paste here
+ * Set Columns to 16, Gutter Width to 0 (since were using padding),
+ * and Breakpoint doesnt matter since were setting breakpoints manually
+ * */
+
+
+total-columns = 16
+gutter-padding = 1%
+app-min-width = auto
+app-max-width = 100%
+
+/* TODO
+ * fix gutter-padding issue
+ * set a default CSS measurement unit
+ * and create a mixin for converting other css measurement unit
+ * to our default unit
+ * FOR, this works, above TODO is for polishing measurements
+ * */
+calc-column(column)
+  (100 / total-columns * column)% - gutter-padding
+
+offset-column(column)
+  initial-column-width = 100 / total-columns
+  calc-column(column) + initial-column-width
+
+/* Grid */
+.container, .row
+  max-width: app-max-width
+  width: app-min-width
+  &:after
+    clear: both
+
+.column, .columns
+  margin-left: 0
+  padding-left: gutter-padding
+  float: left
+  &.end
+    float: left !important
+
+.column:first-child, .columns:first-child
+  margin-left: 0
+  padding-left: 0
+
+.column:last-child, .columns:last-child
+  float: right
+
+/* This Grid system is mobile-first, we dont need to define
+ * media query for small unless we plan on setting a range
+ * for small selector
+ * @media all and (min-width:0em) and (max-width:47.938em)
+ */
+for m in (1..total-columns)
+  .small-{m}
+    width: 100%
+
+@media (min-width:48.000em)
+  for c in (1..total-columns)
+    .medium-{c}, .large-{c}
+      width: calc-column(c)
+
+  for o in (1..total-columns - 1)
+    .medium-offset-{o}, .large-offset-{o}
+      width: offset-column(o)
